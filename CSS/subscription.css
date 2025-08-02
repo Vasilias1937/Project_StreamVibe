@@ -1,0 +1,183 @@
+.main-page {
+  background-color: rgb(20, 20, 20);
+}
+
+.plans-table {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  background-color: #141414;
+  padding: 3%;
+  text-align: center;
+}
+.plans-table h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #e53935, #d32f2f);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.plans-table p {
+  color: #999999;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.plans-table .plans-table-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+  background: rgba(15, 15, 15, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  -webkit-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 1px solid rgba(229, 57, 53, 0.1);
+}
+.plans-table .plans-table-container .plans-table-content {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: "Manrope", sans-serif;
+}
+.plans-table .plans-table-container .plans-table-content thead tr th {
+  padding: 20px 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-bottom: 2px solid rgba(229, 57, 53, 0.3);
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.plans-table .plans-table-container .plans-table-content thead tr th.feature-header {
+  text-align: left;
+  background: rgba(229, 57, 53, 0.1);
+  border-radius: 8px 0 0 0;
+}
+.plans-table .plans-table-container .plans-table-content thead tr th.plan-header {
+  background: rgba(26, 26, 26, 0.8);
+  border-radius: 8px;
+  margin: 0 5px;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.plans-table .plans-table-container .plans-table-content thead tr th.plan-header:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 0 4px 15px rgba(229, 57, 53, 0.2);
+          box-shadow: 0 4px 15px rgba(229, 57, 53, 0.2);
+}
+.plans-table .plans-table-container .plans-table-content thead tr th.plan-header.popular {
+  background: linear-gradient(135deg, rgba(229, 57, 53, 0.2), rgba(211, 47, 47, 0.2));
+  border: 2px solid rgba(229, 57, 53, 0.5);
+  position: relative;
+}
+.plans-table .plans-table-container .plans-table-content thead tr th.plan-header.popular .popular-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #e53935;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  -webkit-animation: pulse 2s ease-in-out infinite;
+          animation: pulse 2s ease-in-out infinite;
+}
+.plans-table .plans-table-container .plans-table-content tbody tr {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.plans-table .plans-table-container .plans-table-content tbody tr:hover {
+  background: rgba(229, 57, 53, 0.05);
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+.plans-table .plans-table-container .plans-table-content tbody tr:nth-child(even) {
+  background: rgba(26, 26, 26, 0.3);
+}
+.plans-table .plans-table-container .plans-table-content tbody tr td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  vertical-align: middle;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.plans-table .plans-table-container .plans-table-content tbody tr td.feature-name {
+  text-align: left;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(229, 57, 53, 0.1);
+  border-radius: 5px;
+  padding: 15px 20px;
+}
+.plans-table .plans-table-container .plans-table-content tbody tr td.feature-value {
+  color: #cccccc;
+  line-height: 1.5;
+  position: relative;
+}
+.plans-table .plans-table-container .plans-table-content tbody tr td.feature-value:hover {
+  color: #ffffff;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+.plans-table .plans-table-container .plans-table-content tbody tr td.feature-value:contains("Yes") {
+  color: #4caf50;
+  font-weight: 600;
+}
+.plans-table .plans-table-container .plans-table-content tbody tr td.feature-value:contains("No") {
+  color: #f44336;
+  font-weight: 600;
+}
+.plans-table .plans-table-container .plans-table-content tbody tr:last-child td {
+  border-bottom: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}

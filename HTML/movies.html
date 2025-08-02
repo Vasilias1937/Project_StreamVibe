@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="../CSS/style.css">
+        <link rel = "stylesheet" href="../CSS/movies.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=PT+Sans+Narrow:wght@400;700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Stalinist+One&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="../Icons/Icon.png">
+        <title>StreamVibe</title>
+    </head>
+    <body>
+        <header class="main-page-header">
+            <div class="header-logo grid-item">
+                <div class="logo-stack">
+                    <img src="../Icons/Vector.png" class="vector">
+                    <img src="../Icons/Icon.png" class="icon">
+                </div>
+                <img src="../Icons/StreamVibe.png" class="streamvibe">
+            </div>
+            <nav class="header-navigation grid-item">
+                <h3 class="nav-elem nav-home">Home</h3>
+                <h3 class="nav-elem nav-Movies active">Movies&Shows</h3>
+                <h3 class="nav-elem nav-support">Support</h3>
+                <h3 class="nav-elem nav-sub">Subscriptions</h3>
+            </nav>
+            <div class="header-buttons grid-item">
+                <button class="header-assist-button"><img src="../Icons/loop.png"></button>
+                <button class="header-assist-button"><img src="../Icons/coloc.png"></button>
+            </div>
+        </header>
+        <main class="main-page movies-page">
+
+            <div class="modal" style="display: none;"></div>
+
+            <h1 style="text-align:center;margin:30px 0 10px 0;">Лучшие фильмы и шоу</h1>
+            <div class="films-grid"></div>
+            <!-- Пагинация будет добавлена скриптом -->
+        </main>
+        <footer class="main-page-footer">
+            <div class="links">
+                <div class="footerColumn">
+                    <h4>Home</h4>
+                    <a class="footer-link">Categories</a>
+                    <a class="footer-link">Devices</a>
+                    <a class="footer-link">Pricing</a>
+                    <a class="footer-link">FAQ</a>
+                </div>
+                <div class="footerColumn">
+                    <h4>Movies</h4>
+                    <a class="footer-link">Genres</a>
+                    <a class="footer-link">Trending</a>
+                    <a class="footer-link">New released</a>
+                    <a class="footer-link">Popular</a>
+                </div>
+                <div class="footerColumn">
+                    <h4>Shows</h4>
+                    <a class="footer-link">Genres</a>
+                    <a class="footer-link">Trending</a>
+                    <a class="footer-link">New released</a>
+                    <a class="footer-link">Popular</a>
+                </div>
+                <div class="footerColumn">
+                    <h4>Support</h4>
+                    <a class="footer-link">Contact Us</a>
+                </div>
+                <div class="footerColumn">
+                    <h4>Subscription</h4>
+                    <a class="footer-link">Plans</a>
+                    <a class="footer-link">Features</a>
+                </div>
+                <div class="footerColumn">
+                    <h4>Connect With Us</h4>
+                    <div class="image-links">
+                        <a><img class="footer-connect-icon" src="../Icons/facebook.png"></a>
+                        <a><img class="footer-connect-icon" src="../Icons/linkedIN.png"></a>
+                        <a><img class="footer-connect-icon" src="../Icons/twitter.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="all-rights-reserved">
+                <p>@2025 streamvib. All Rights Reserved</p>
+                <a>Terms Of Use</a>
+                <a>Privacy Policy</a>
+                <a>Cookie Policy</a>
+            </div>
+        </footer>
+        <script src="../JS/displayFilms.js"></script>
+        <script src="../JS/openModal.js"></script>
+    </body>
+</html>

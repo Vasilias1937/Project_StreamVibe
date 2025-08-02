@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=PT+Sans+Narrow:wght@400;700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Stalinist+One&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="../Icons/Icon.png">
+    </head>
+
+    <body class="modal-body">
+        <button class="close-button">&times;</button>
+        
+        <!-- Героическая секция с постером -->
+        <div class="hero-section">
+            <div class="hero-background">
+                <img class="hero-image" src="" alt="Movie Poster">
+                <div class="hero-overlay">
+                    <h1 class="film-name">Name</h1>
+                    <p class="film-description">Film description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque eligendi architecto odit fugiat voluptas</p>
+                    <div class="action-buttons">
+                        <button class="playButton">▶ Play Now</button>
+                        <button class="addToListButton">+</button>
+                        <button class="likeButton">👍</button>
+                        <button class="volumeButton">🔊</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Основной контент -->
+        <div class="content-section">
+            <!-- Левая колонка -->
+            <div class="left-column">
+                <div class="description">
+                    <h4 class="description-header">Description</h4>
+                    <p class="description-text"></p>
+                </div>
+
+                <div class="cast">
+                    <h4 class="cast-header">Cast</h4>
+                    <div class="cast-navigation">
+                        <button class="cast-nav-left">‹</button>
+                        <button class="cast-nav-right">›</button>
+                    </div>
+                    <div class="cast-list">
+                        <!-- Актеры будут добавлены динамически -->
+                    </div>
+                </div>
+
+                <div class="reviews">
+                    <h4 class="reviews-header">Reviews</h4>
+                    <button class="reviews-button">+ Add Your Review</button>
+                    <div class="reviews-list">
+                        <!-- Отзывы будут добавлены динамически -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Правая колонка -->
+            <div class="right-column">
+                <div class="info-item">
+                    <h4>Released Year</h4>
+                    <p class="released-year"></p>
+                </div>
+
+                <div class="info-item">
+                    <h4>Available Languages</h4>
+                    <div class="languages-list">
+                        <!-- Языки будут добавлены динамически -->
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <h4>Ratings</h4>
+                    <div class="ratings-list">
+                        <!-- Рейтинги будут добавлены динамически -->
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <h4>Genres</h4>
+                    <div class="genres-list">
+                        <!-- Жанры будут добавлены динамически -->
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <h4>Director</h4>
+                    <div class="director-info">
+                        <!-- Информация о режиссере будет добавлена динамически -->
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <h4>Music</h4>
+                    <div class="music-info">
+                        <!-- Информация о музыке будет добавлена динамически -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../JS/openModal.js"></script>
+    </body>
+
+</html>

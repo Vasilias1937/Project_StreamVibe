@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="../CSS/style.css">
+        <link rel = "stylesheet" href="../CSS/support.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=PT+Sans+Narrow:wght@400;700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Stalinist+One&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="../Icons/Icon.png">
+        <title>StreamVibe</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const form = document.querySelector('.support-question-form');
+                
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Собираем данные формы
+                    const formData = new FormData(form);
+                    const data = Object.fromEntries(formData);
+                    
+                    // Отправляем на тестовый сервис
+                    fetch('https://httpbin.org/post', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Форма успешно отправлена:', data);
+                        alert('Сообщение успешно отправлено!');
+                        form.reset();
+                    })
+                    .catch(error => {
+                        console.error('Ошибка отправки:', error);
+                        alert('Произошла ошибка при отправке. Попробуйте еще раз.');
+                    });
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+
+        <header class="main-page-header">
+
+            <div class="header-logo grid-item">
+                <div class="logo-stack">
+                    <img src="../Icons/Vector.png" class="vector">
+                    <img src="../Icons/Icon.png" class="icon">
+                </div>
+                <img src="../Icons/StreamVibe.png" class="streamvibe">
+            </div>
+
+            <nav class="header-navigation grid-item">
+                <h3 class="nav-elem">Home</h3>
+                <h3 class="nav-elem">Movies&Shows</h3>
+                <h3 class="nav-elem active">Supprot</h3>
+                <h3 class="nav-elem">Subscriptions</h3>
+            </nav>
+
+            <div class="header-buttons grid-item">
+                <button class="header-assist-button"><img src="../Icons/loop.png"></button>
+                <button class="header-assist-button"><img src="../Icons/coloc.png"></button>
+            </div>
+
+        </header>
+
+        <main class="main-page">
+
+            <div class="support-page-mainBlock">
+
+                <div class="mainBlock-info">
+                    <h1>Welcome to our support page!</h1>
+                    <p>We`re here to help you with any problems you may be having with our product</p>
+                    <img src="../Assets/bodyBackground.png">
+                </div>
+
+                <form class="support-question-form" >
+
+                    <label class="form-label form-label-firstname">
+                        First Name
+                        <input type="text" name="firstName" placeholder="Enter your first name" required class="support-question-form-input">
+                    </label>
+
+                    <label class="form-label form-label-lastname">
+                        Last Name
+                        <input type="text" name="lastName" placeholder="Enter your last name" required class="support-question-form-input">
+                    </label>
+
+                    <label class="form-label form-label-email">
+                        Email
+                        <input type="email" name="email" placeholder="Enter your email" required class="support-question-form-input">
+                    </label>
+
+                    <label class="form-label form-label-phone">
+                        Phone Number
+                        <input type="tel" name="phoneNumber" placeholder="Enter your phone number" required class="support-question-form-input">
+                    </label>
+
+                    <label class="form-label form-label-message">
+                        Message
+                        <textarea name="message" placeholder="your message" required></textarea>
+                    </label>
+
+                    <label class="form-label form-label-agree">
+                        <input type="checkbox" name="agree" required>
+                        I agree with Terms of Use and Privacy Policy  
+                    </label>
+
+                    <button type="submit" class="form-submit-button">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <div class="help-questions">
+                <div class="help-questions-text">
+                    <h2 class="help-questions-header">Frequently Asked Questions</h2>
+                    <p class="help-questions-p">Got Questions? We`ve got answers! Check out out FAQ section to find answers to the most common questions about StreamVibe</p>
+                    <button class="help-questions-button">Ask a Question</button>
+                </div>
+
+                <div class="help-questions-FAQ">
+                    <div class="faq-item">
+                      <div class="faq-header">
+                        <h2 class="question">What is StreamVibe?</h2>
+                        <button class="faq-toggle">+</button>
+                      </div>
+                      <p class="answer">StramVibe is a streaming that allows you to watch movies and shows on demand</p>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-header">
+                        <h2 class="question">How much does StreamVibe cost?</h2>
+                        <button class="faq-toggle">+</button>
+                      </div>
+                      <p class="answer">StramVibe is a streaming that allows you to watch movies and shows on demand</p>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-header">
+                        <h2 class="question">What content is available on StreamVibe?</h2>
+                        <button class="faq-toggle">+</button>
+                      </div>
+                      <p class="answer">StramVibe is a streaming that allows you to watch movies and shows on demand</p>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-header">
+                        <h2 class="question">How can I watch StreamVibe?</h2>
+                        <button class="faq-toggle">+</button>
+                      </div>
+                      <p class="answer">StramVibe is a streaming that allows you to watch movies and shows on demand</p>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-header">
+                        <h2 class="question">How do I sign up for StreamVibe?</h2>
+                        <button class="faq-toggle">+</button>
+                      </div>
+                      <p class="answer">StramVibe is a streaming that allows you to watch movies and shows on demand</p>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-header">
+                        <h2 class="question">What is the StreamVibe free trial?</h2>
+                        <button class="faq-toggle">+</button>
+                      </div>
+                      <p class="answer">StramVibe is a streaming that allows you to watch movies and shows on demand</p>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-header">
+                        <h2 class="question">How do I contact StreamVibe customer support?</h2>
+                        <button class="faq-toggle">+</button>
+                      </div>
+                      <p class="answer">StramVibe is a streaming that allows you to watch movies and shows on demand</p>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-header">
+                        <h2 class="question">What are the StreamVibe payment methods?</h2>
+                        <button class="faq-toggle">+</button>
+                      </div>
+                      <p class="answer">StramVibe is a streaming that allows you to watch movies and shows on demand</p>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+
+
+        <footer class="main-page-footer">
+
+          <div class="links">
+            
+            <div class="footerColumn">
+              <h4>Home</h4>
+              <a class="footer-link">Categories</a>
+              <a class="footer-link">Devices</a>
+              <a class="footer-link">Pricing</a>
+              <a class="footer-link">FAQ</a>
+            </div>
+  
+            <div class="footerColumn">
+              <h4>Movies</h4>
+              <a class="footer-link">Genres</a>
+              <a class="footer-link">Trending</a>
+              <a class="footer-link">New released</a>
+              <a class="footer-link">Popular</a>
+            </div>
+  
+            <div class="footerColumn">
+              <h4>Shows</h4>
+              <a class="footer-link">Genres</a>
+              <a class="footer-link">Trending</a>
+              <a class="footer-link">New released</a>
+              <a class="footer-link">Popular</a>
+            </div>
+  
+            <div class="footerColumn">
+              <h4>Support</h4>
+              <a class="footer-link">Contact Us</a>
+            </div>
+  
+            <div class="footerColumn">
+              <h4>Subscription</h4>
+              <a class="footer-link">Plans</a>
+              <a class="footer-link">Features</a>
+            </div>
+  
+            <div class="footerColumn">
+              <h4>Connect With Us</h4>
+
+              <div class="image-links">
+                <a><img class="footer-connect-icon" src="../Icons/facebook.png"></a>
+                <a><img class="footer-connect-icon" src="../Icons/linkedIN.png"></a>
+                <a><img class="footer-connect-icon" src="../Icons/twitter.png"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="all-rights-reserved">
+            <p>@2025 streamvib. All Rights Reserved</p>
+            <a>Terms Of Use</a>
+            <a>Privacy Policy</a>
+            <a>Coockie Policy</a>
+          </div>
+        </footer>
+
+    <script src="JS/FAQ.js"></script>
+    <!-- <script src="JS/fetchAPGenresCardsI.js"></script> -->
+    </body>
+</html>
